@@ -1,0 +1,76 @@
+header,
+nav,
+main,
+aside,
+footer {
+    padding: 1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+}
+
+body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    grid-template-areas:
+        "header header header"
+        "header header header"
+        "header header header"
+        "nav nav nav"
+        "main main aside"
+        "main main aside"
+        "main main aside"
+        "main main aside"
+        "main main aside"
+        "main main aside"
+        "footer footer footer"
+        "footer footer footer";
+    grid-gap: .3rem;
+    max-width: 80vw;
+    height: 200vh;
+    margin: 0 10vw;
+}
+
+header {
+    grid-area: header;
+    background-color: aqua;
+}
+
+nav {
+    grid-area: nav;
+    background-color: hotpink;
+}
+
+main {
+    grid-area: main;
+    background-color: greenyellow;
+}
+
+aside {
+    grid-area: aside;
+    background-color: aquamarine;
+}
+
+footer {
+    grid-area: footer;
+    background-color: yellow;
+}
+
+@media screen and (max-width: 1000px) {
+    body {
+        grid-template-areas:
+            "header header header"
+            "header header header"
+            "header header header"
+            "nav nav nav"
+            "main main main"
+            "main main main"
+            "main main main"
+            "main main main"
+            "aside aside aside"
+            "aside aside aside"
+            "footer footer footer"
+            "footer footer footer";
+    }
+
+}
