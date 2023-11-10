@@ -11,47 +11,42 @@ footer {
 body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(12, 1fr);
     grid-template-areas:
-        "header header header"
-        "header header header"
         "header header header"
         "nav nav nav"
         "main main aside"
-        "main main aside"
-        "main main aside"
-        "main main aside"
-        "main main aside"
-        "main main aside"
-        "footer footer footer"
         "footer footer footer";
     grid-gap: .3rem;
     max-width: 80vw;
-    height: 200vh;
     margin: 0 10vw;
 }
 
 header {
+    height: 30vh;
     grid-area: header;
     background-color: aqua;
 }
 
 nav {
+    height: 10vh;
     grid-area: nav;
     background-color: hotpink;
 }
 
 main {
+    height: 50vh;
     grid-area: main;
     background-color: greenyellow;
 }
 
 aside {
+    height: 50vh;
     grid-area: aside;
     background-color: aquamarine;
 }
 
 footer {
+    height: 20vh;
     grid-area: footer;
     background-color: yellow;
 }
@@ -60,16 +55,9 @@ footer {
     body {
         grid-template-areas:
             "header header header"
-            "header header header"
-            "header header header"
             "nav nav nav"
             "main main main"
-            "main main main"
-            "main main main"
-            "main main main"
             "aside aside aside"
-            "aside aside aside"
-            "footer footer footer"
             "footer footer footer";
     }
 
